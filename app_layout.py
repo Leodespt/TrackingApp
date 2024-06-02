@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 
 # Other imports
-from app import app
+from app_init import app
 from views import AcceptedPL, Wallet, InvestmentStats, error
 
 navBar = dbc.Navbar(id='navBar',
@@ -15,7 +15,7 @@ navBar = dbc.Navbar(id='navBar',
     className='navbar navbar-expand-lg navbar-dark bg-primary',
 )
 
-app.layout = html.Div([
+layout = html.Div([
     #dcc.Store(id='session-store-currency', storage_type='session',data={'currency': 'EUR'}),
     dcc.Location(id='url', refresh=False),
     html.Div([
@@ -92,7 +92,4 @@ def update_currency(selected_currency):
         raise PreventUpdate
 """
 
-# %% MAIN 
 
-if __name__ == '__main__':
-    app.run_server(debug=True)

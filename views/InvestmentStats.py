@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from plotly.subplots import make_subplots
 
 # Other imports
-from app import app
+from app_init import app
 import data_preparation as dataP
 from data_preparation import usd_value
 

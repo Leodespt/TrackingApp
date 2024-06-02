@@ -4,7 +4,7 @@ from dash import html, dash_table, dcc
 from dash.dependencies import Input, Output
 
 # Other imports
-from app import app
+from app_init import app
 import data_preparation as dataP
 from data_preparation import usd_value
 

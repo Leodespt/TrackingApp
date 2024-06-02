@@ -8,7 +8,7 @@ import plotly.express as px
 import pandas as pd
 
 # Other imports
-from app import app
+from app_init import app
 import data_preparation as dataP
 from data_preparation import usd_value
 
