@@ -8,6 +8,7 @@ def import_data():
     scope = ['https://www.googleapis.com/auth/spreadsheets',#Enable Google Sheet API
             "https://www.googleapis.com/auth/drive"] #Enable Google Drive API
 
+
     #Cretentials
     credentials = ServiceAccountCredentials.from_json_keyfile_name("gs_credentials.json", scope)
     client = gspread.authorize(credentials)
