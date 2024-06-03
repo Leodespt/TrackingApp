@@ -12,7 +12,7 @@ from app_layout import layout
 
 #Start the app
 if __name__ == "__main__":  
-    #server = app.server
+    server = app.server
     app.layout = layout
     #app.run(debug=False)
     app.run_server(debug=True)
