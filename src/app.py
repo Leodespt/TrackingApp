@@ -10,9 +10,9 @@ from app_init import app
 #Import the layouts
 from app_layout import layout
 
+app.layout = layout
+server = app.server
+
 #Start the app
 if __name__ == "__main__":  
-    server = app.server
-    app.layout = layout
-    #app.run(debug=False)
     app.run_server(debug=True)
