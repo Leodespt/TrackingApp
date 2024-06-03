@@ -9,9 +9,10 @@ import data_preparation as dataP
 from data_preparation import usd_value
 
 # Formating of the thousand values in $
-import locale
+#import locale
 from dash.dash_table.Format import Format, Symbol, Group, Scheme
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+#locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
 
 # %% Display style of the tables and charts
 
@@ -60,7 +61,7 @@ def TotalPL(pageContent):
                     symbol = "$"
 
             
-            pl_formatted = locale.format_string("%.2f", pl_sum, grouping=True)
+            pl_formatted = f"{pl_sum:.2f}"#locale.format_string("%.2f", pl_sum, grouping=True)
             color = 'red' if pl_sum < 0 else 'green'
 
             description = html.Div(

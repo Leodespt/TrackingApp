@@ -15,8 +15,8 @@ from data_preparation import usd_value
 import requests
 
 # Formating of the thousand values in $
-import locale
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8') 
+#import locale
+#locale.setlocale(locale.LC_ALL, 'en_US.UTF-8') 
 
 # %% Display style of the tables and charts
 MENU_STYLE = {
@@ -287,12 +287,12 @@ def crypto_chart(selected_crypto, interval):
                 # Add the line value as an annotation
                 fig.add_annotation(x=df['timestamp'].iloc[-1],
                                 y=avg_price,
-                                text=str(locale.format_string('%.2f', avg_price, grouping=True)+f' {currency_symbol}'),
+                                text=str(f"{avg_price:.2f}"+f' {currency_symbol}'),#locale.format_string('%.2f', avg_price, grouping=True)
                                 showarrow=False,
                                 font=dict(color="#FFFFFF",size=16),
                                 yshift=10,
                                 xshift = -50,
-                                hovertext=str(locale.format_string('%.2f', avg_price, grouping=True))+f' {currency_symbol}')
+                                hovertext=str(f"{avg_price:.2f}"+f' {currency_symbol}'))#locale.format_string('%.2f', avg_price, grouping=True))
 
                 fig.update_layout(
                         title={

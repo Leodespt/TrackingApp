@@ -11,3 +11,9 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
+      - key: LANG
+        value: en_US.UTF-8
+      - key: LANGUAGE
+        value: en_US:en
+      - key: LC_ALL
+        value: en_US.UTF-8

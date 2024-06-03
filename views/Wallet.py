@@ -13,9 +13,9 @@ import data_preparation as dataP
 from data_preparation import usd_value
 
 # Set the locale for formatting
-import locale
+#import locale
 from dash.dash_table.Format import Format, Symbol, Group, Scheme
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+#locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 # Table column formatting
 percentage = dash_table.FormatTemplate.percentage(2)
@@ -94,13 +94,13 @@ def update_header(pageContent):
             symbol = '$'
 
         # Format wallet_value and wallet_pl
-        wallet_value = locale.format_string('%.2f', wallet_value, grouping=True)
-        wallet_pl = locale.format_string('%.2f', wallet_pl, grouping=True)
+        wallet_value = f"{wallet_value:.2f}"#locale.format_string('%.2f', wallet_value, grouping=True)
+        wallet_pl = f"{wallet_pl:.2f}"#locale.format_string('%.2f', wallet_pl, grouping=True)
 
-        amount_invested = locale.format_string('%.2f', amount_invested, grouping=True)
+        amount_invested = f"{amount_invested:.2f}"#locale.format_string('%.2f', amount_invested, grouping=True)
         print(amount_invested)
 
-        pl_pourcentage = locale.format_string('%.2f', total_table[2], grouping=True)
+        pl_pourcentage = f"{total_table[2]:.2f}"#locale.format_string('%.2f', total_table[2], grouping=True)
 
         header_content = [
             html.Div(
@@ -209,7 +209,7 @@ def update_pie_chart(pageContent):
 
         # Define the formatting function
         def format_value(value):
-            return locale.format_string('%.2f', value, grouping=True)
+            return f"{value[2]:.2f}"#locale.format_string('%.2f', value, grouping=True)
         
         trx_summary['Value_with_unit'] = trx_summary['Value'].apply(format_value).astype(str) + symbol
 
