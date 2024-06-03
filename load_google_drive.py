@@ -10,7 +10,7 @@ def import_data():
 
 
     #Cretentials
-    credentials = ServiceAccountCredentials.from_json_keyfile_name("gs_credentials.json", scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name("/etc/secrets/gs_credentials.json", scope)
     client = gspread.authorize(credentials)
 
     # Open the spreadsheet
