@@ -15,5 +15,3 @@ services:
         value: en_US.UTF-8
       - key: LANGUAGE
         value: en_US:en
-      - key: LC_ALL
-        value: en_US.UTF-8
